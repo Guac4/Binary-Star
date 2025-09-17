@@ -42,6 +42,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: 1Sky
+    uniqueID: 278211387
+    locked: 0
+  - name: 2Mountains
+    uniqueID: 897434007
+    locked: 0
+  - name: Player
+    uniqueID: 202947181
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1
