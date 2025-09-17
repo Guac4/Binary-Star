@@ -9,6 +9,7 @@ public class Player_Movement : MonoBehaviour
     public Vector2 boxSize;
     public float castDistance;
     public LayerMask groundLayer;
+    public Animator animator;
 
     bool grounded;
 
@@ -69,6 +70,14 @@ public class Player_Movement : MonoBehaviour
     public void Move(InputAction.CallbackContext ctx)
     {
         _movement = ctx.ReadValue<Vector2>().x * moveSpeed;
+        if (_movement != 0)
+        {
+            animator.SetBool("isRunning") = true;
+        }
+        else
+        {
+            animator.SetBool("isRunning") = false;
+        }
     }
 
     public void Jump(InputAction.CallbackContext ctx)
