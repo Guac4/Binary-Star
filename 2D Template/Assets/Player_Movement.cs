@@ -11,7 +11,6 @@ public class Player_Movement : MonoBehaviour
     public LayerMask groundLayer;
     public Animator _animator;
     bool facingRight = true;
-
     bool grounded;
 
     public Rigidbody2D rb2d;
@@ -29,12 +28,21 @@ public class Player_Movement : MonoBehaviour
     void Update()
     {
         rb2d.linearVelocityX = _movement;
+        if (isGrounded())
+        {
+            _animator.SetBool("isJumping", false);
+        }
+        if (!isGrounded())
+        {
+            _animator.SetBool("isJumping", true);
+        }
     }
 
     public bool isGrounded()
     {
         if(Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, castDistance, groundLayer))
         {
+            
             return true;
         }
         else
