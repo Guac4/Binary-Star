@@ -472,6 +472,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  _animator: {fileID: 54035936}
   rb2d: {fileID: 54035933}
 --- !u!95 &54035936
 Animator:

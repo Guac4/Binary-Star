@@ -9,7 +9,7 @@ public class Player_Movement : MonoBehaviour
     public Vector2 boxSize;
     public float castDistance;
     public LayerMask groundLayer;
-    public Animator animator;
+    public Animator _animator;
 
     bool grounded;
 
@@ -72,11 +72,11 @@ public class Player_Movement : MonoBehaviour
         _movement = ctx.ReadValue<Vector2>().x * moveSpeed;
         if (_movement != 0)
         {
-            animator.SetBool("isRunning") = true;
+            _animator.SetBool("isRunning", true);
         }
         else
         {
-            animator.SetBool("isRunning") = false;
+            _animator.SetBool("isRunning", false);
         }
     }
 
