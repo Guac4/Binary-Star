@@ -10,6 +10,7 @@ public class Player_Movement : MonoBehaviour
     public float castDistance;
     public LayerMask groundLayer;
     public Animator _animator;
+    bool facingRight = true;
 
     bool grounded;
 
@@ -78,6 +79,24 @@ public class Player_Movement : MonoBehaviour
         {
             _animator.SetBool("isRunning", false);
         }
+        if (_movement > 0 && !facingRight)
+        {
+            Flip();
+        }
+        if (_movement < 0 && facingRight)
+        {
+            Flip();
+        }
+
+    }
+
+    void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 
     public void Jump(InputAction.CallbackContext ctx)
