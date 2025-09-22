@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
+
+    public Vector2 boxSize;
+    public float castDistance;
     void Start()
     {
         
@@ -16,5 +19,9 @@ public class GameManagerScript : MonoBehaviour
     public void LoadScene()
     {
         SceneManager.LoadScene("Binary Star");
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(transform.position - transform.up * castDistance, boxSize);
     }
 }
