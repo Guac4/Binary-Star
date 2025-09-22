@@ -13,11 +13,14 @@ public class Player_Movement : MonoBehaviour
     bool facingRight = true;
     bool grounded;
 
+    public GameManagerScript GameManagerScript;
+
     public Rigidbody2D rb2d;
 
 
     private float _movement;
 
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
