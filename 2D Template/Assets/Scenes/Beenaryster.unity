@@ -1019,8 +1019,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1703965298}
   - component: {fileID: 1703965297}
-  - component: {fileID: 1703965296}
   - component: {fileID: 1703965299}
+  - component: {fileID: 1703965296}
   m_Layer: 0
   m_Name: Void
   m_TagString: Untagged
@@ -1156,7 +1156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c549b75acdffc174789665d930e9c84a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoseWindow: {fileID: 0}
 --- !u!1 &1942289912
 GameObject:
   m_ObjectHideFlags: 0

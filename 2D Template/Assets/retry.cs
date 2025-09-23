@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class Death : MonoBehaviour
+public class retry : MonoBehaviour
 {
+    public void PlayGame()
+    {
+        SceneManager.LoadSceneAsync(1);
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -13,14 +16,6 @@ public class Death : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject.CompareTag("Player"))
-        {
-            SceneManager.LoadSceneAsync(2);
-        }
     }
 }
