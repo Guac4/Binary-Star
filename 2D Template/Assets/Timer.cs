@@ -29,7 +29,7 @@ public class Timer : MonoBehaviour
         {
             remainingTime = 0;
             // GameOver();
-            timerText.color = Color.red;
+            SceneManager.LoadSceneAsync(2);
             EndGame();
         }
 
