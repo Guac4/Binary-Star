@@ -7,6 +7,11 @@ public class retry : MonoBehaviour
         SceneManager.LoadSceneAsync(1);
     }
 
+    public void Menu()
+    {
+        SceneManager.LoadSceneAsync(0);
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
